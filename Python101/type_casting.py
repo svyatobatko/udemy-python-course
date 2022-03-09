@@ -12,3 +12,8 @@
 # grocery_list = set(grocery_list)
 # print(grocery_list)
 # print(type(grocery_list))
+
+grocery_list = ['Apples', 'Oranges', 'Bananas', 'Apples']
+grocery_list = tuple(grocery_list)
+print(grocery_list)
+print(type(grocery_list))
