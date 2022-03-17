@@ -18,7 +18,10 @@ def read_account_balance(file_name="banking.csv", account_name=""):
         for line in file:
             data = line.split(";")
             if account_name == data[0]:
-                balance = float(data[1])
+                try:
+                    balance = float(data[1])
+                except ValueError:
+                    balance = 0.0
     return balance
 
 
@@ -48,10 +51,16 @@ while True:
     print("Hi, " + BankAccount(account).name + ". You balance = " + str(BankAccount.balance))
     operation = input("Pleas select operation (w - withdrawal) or (d - deposit), (q - quit)")
     if operation == "w":
-        amount = float(input("What amount do you want withdrawal?"))
+        try:
+            amount = float(input("What amount do you want withdrawal?"))
+        except ValueError:
+            amount = 0.0
         bankAccount.withdrawal(amount)
     elif operation == "d":
-        amount = float(input("What amount do you want deposit?"))
+        try:
+            amount = float(input("What amount do you want deposit?"))
+        except ValueError:
+            amount = 0.0
         bankAccount.deposit(amount)
     elif operation == "q":
         print("Thank for use our service")
