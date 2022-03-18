@@ -1,0 +1,3 @@
+Username (leave blank to use 'macbook'): mysite
+Email address: mysite@mysite.my
+Password: mysite
