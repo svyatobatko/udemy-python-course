@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block body %}
+    <a href="{% url 'feed:index' %}">&larr; Go back</a>
     <h3> Text </h3>
     {{ object.text }}
     <h3> Image </h3>

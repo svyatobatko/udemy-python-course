@@ -6,15 +6,14 @@
 {% endblock %}
 
 {% block body %}
-<h2>Stuf in here from home.html</h2>
-    <p>{{ posts }}
     <hr>
     {% for post in posts %}
-        {{post.text}}
-        <br>
-        {% thumbnail post.image "100x100" crop="center" as im %}
-            <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
-        {% endthumbnail %}
+        <a href="{% url 'feed:detail' post.id %}" style='display: inline-block;'>
+            {{post.text}} <br>
+            {% thumbnail post.image "100x100" crop="center" as im %}
+                <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+            {% endthumbnail %}
+        </a>
         <hr>
     {% endfor %}
 {% endblock %}
