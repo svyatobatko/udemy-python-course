@@ -6,6 +6,7 @@
 {% endblock %}
 
 {% block body %}
+    <a href="{% url 'feed:post' %}">Add new post</a>
     <hr>
     {% for post in posts %}
         <a href="{% url 'feed:detail' post.id %}" style='display: inline-block;'>
