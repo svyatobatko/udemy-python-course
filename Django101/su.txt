@@ -4,4 +4,6 @@ Password: mysite
 
 
 additional information and link:
-ccbv.co.uk
+https://ccbv.co.uk/
+https://docs.djangoproject.com/
+https://getbootstrap.com/
