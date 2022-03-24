@@ -2,4 +2,10 @@
 
 {% block title %}New title{% endblock %}
 
-{% block body %}Body from feed{% endblock %}
+{% block body %}
+    {% for post in posts %}
+        <p>{{ post.text }} written an {{ post.date }}</p>
+    {% empty %}
+        Posts are absent!
+    {% endfor %}
+{% endblock %}
