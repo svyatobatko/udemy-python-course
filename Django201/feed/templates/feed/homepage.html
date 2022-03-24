@@ -4,7 +4,7 @@
 
 {% block body %}
     {% for post in posts %}
-        <p>{{ post.text }} written an {{ post.date }}</p>
+        <p>{{ post.text }} written on {{ post.date }}</p>
     {% empty %}
         Posts are absent!
     {% endfor %}
