@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Base file</title>
+    <title>{% block title %}Base file{% endblock %}</title>
 </head>
 <body>
-  Base file is here
+    Base file is here
+    <br>
+    {% block body %}{% endblock %}
 </body>
 </html>
