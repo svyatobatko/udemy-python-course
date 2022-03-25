@@ -51,3 +51,4 @@ Thumbs.db
 # Datebase
 *.sqlite3
 
+media/
