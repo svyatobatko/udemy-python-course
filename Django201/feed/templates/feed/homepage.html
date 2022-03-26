@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load thumbnail %}
 
-{% block title %}New title{% endblock %}
+{% block title %}Posts{% endblock %}
 
 {% block body %}
     {% for post in posts %}
@@ -16,10 +16,9 @@
                 <p class="mt-2 text-gray-600">{{ post.text }}</p>
             </div>
             <div class="flex justify-between items-center mt-4">
-                {# TODO #}
-                    <a class="text-blue-600 hover:underline" href="{% url 'feed:detail' post.id %}">
-                        Read more
-                    </a>
+                <a class="text-blue-600 hover:underline" href="{% url 'feed:detail' post.id %}">
+                    Read more
+                </a>
                 <div>
                     {# TODO add url below #}
                     <a class="flex items-center" href="#">
