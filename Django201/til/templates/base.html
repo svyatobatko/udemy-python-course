@@ -65,7 +65,7 @@
             <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"/>
             </svg>
             </div>
-            {# TODO #}
+              <textarea class="border-2 border-blue-500 my-4 w-full js-post-text" placeholder="Enter your post" rows="3" maxlength="240" data-post-url="{% url 'feed:new_post' %}"></textarea>
             <div class="ml-auto">
               <button class="bg-white text-gray-800 font-bold rounded border-b-2 border-green-500 hover:border-green-600 hover:bg-green-500 hover:text-white shadow-md py-1 px-3 inline-flex items-center text-sm mt-4 js-submit" type="button">
                   <span class="mr-2">Create Post</span>

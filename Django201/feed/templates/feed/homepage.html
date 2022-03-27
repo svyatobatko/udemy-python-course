@@ -3,9 +3,11 @@
 {% block title %}Posts{% endblock %}
 
 {% block body %}
-    {% for post in posts %}
-        {% include "includes/post.html" with post=post show_detail_link=True %}
-    {% empty %}
-        Posts are absent!
-    {% endfor %}
+    <div id="posts-container">
+        {% for post in posts %}
+            {% include "includes/post.html" with post=post show_detail_link=True %}
+        {% empty %}
+            Posts are absent!
+        {% endfor %}
+    </div>
 {% endblock %}
