@@ -12,3 +12,4 @@ django 201
 https://django-allauth.readthedocs.io/en/latest/
 https://tailwindcss.com/
 https://boxicons.com/
+https://jquery.com/
