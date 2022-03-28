@@ -29,7 +29,7 @@ $.ajaxSetup({
 });
 
 $(document).on("click", ".js-toggle-modal", function(e) {
-    e.preventDefault()
+    e.preventDefault();
     $(".js-modal").toggleClass("hidden")
 })
 .on("click", ".js-submit", function(e) {
@@ -59,4 +59,32 @@ $(document).on("click", ".js-toggle-modal", function(e) {
             $btn.prop("disabled", false).text("Error");
         }
     });
+})
+.on("click", ".js-follow", function(e) {
+    e.preventDefault();
+    const action = $(this).attr("data-action");
+
+    $.ajax({
+        type: 'POST',
+        url: $(this).data("url"),
+        data: {
+            action: action,
+            username: $(this).data("username"),
+        },
+        success: (data) => {
+            $(".js-follow-text").text(data.wording)
+            if(action == "follow") {
+                // change follow to unfollow
+                $(this).attr("data-action", "unfollow")
+            } else {
+                // change unfollow to follow
+                $(this).attr("data-action", "follow")
+            }
+        },
+        error: (error) => {
+            console.warn(error)
+
+        }
+    });
+
 })
